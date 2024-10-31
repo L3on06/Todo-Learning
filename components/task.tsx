@@ -1,6 +1,7 @@
 import React from 'react'
 import { cn } from '@/lib/utils'
 import { useTaskStore } from '@/store/task'
+import { Button } from './ui/button'
 
 export default function Task({
   id,
@@ -20,11 +21,11 @@ export default function Task({
   return (
     <div
       className={cn(
-        'flex cursor-move items-start justify-between rounded-lg bg-white px-3 py-2 text-gray-900',
+        'flex cursor-move items-center gap-4 justify-between rounded-lg bg-white px-3 py-2 text-gray-900',
         {
-          'border-2 border-sky-500': status === 'TODO',
-          'border-2 border-amber-500': status === 'IN_PROGRESS',
-          'border-2 border-emerald-500': status === 'DONE'
+          'border-4 border-sky-600': status === 'TODO',
+          'border-4 border-amber-500': status === 'IN_PROGRESS',
+          'border-4 border-emerald-500': status === 'DONE'
         }
       )}
       draggable
@@ -35,12 +36,12 @@ export default function Task({
         <p className='text-sm font-light text-gray-500'>{description}</p>
       </div>
 
-      <button onClick={() => removeTask(id)} className='cursor-pointer'>
+      <Button variant='destructive' onClick={() => removeTask(id)} className='cursor-pointer flex'>
         <svg
           xmlns='http://www.w3.org/2000/svg'
           viewBox='0 0 24 24'
           fill='currentColor'
-          className='h-5 w-5 text-gray-500 hover:text-rose-400'
+          className='h-5 w-5 text-white'
         >
           <path
             fillRule='evenodd'
@@ -48,7 +49,7 @@ export default function Task({
             clipRule='evenodd'
           />
         </svg>
-      </button>
+      </Button>
     </div>
   )
 }
