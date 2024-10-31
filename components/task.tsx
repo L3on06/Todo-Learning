@@ -21,7 +21,7 @@ export default function Task({
   return (
     <div
       className={cn(
-        'flex cursor-move items-center gap-4 justify-between rounded-lg bg-white px-3 py-2 text-gray-900',
+        'flex cursor-move items-center gap-4 justify-between rounded-lg bg-white px-3 py-2 shadow-black/50 shadow-md',
         {
           'border-4 border-sky-600': status === 'TODO',
           'border-4 border-amber-500': status === 'IN_PROGRESS',

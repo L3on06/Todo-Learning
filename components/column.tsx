@@ -34,11 +34,11 @@ export default function Column({
   }
 
   return (
-    <section className='h-[600px] flex-1 shadow-2xl'>
+    <section className='h-[600px] flex-1'>
       <h2 className='ml-1 font-serif text-center text-3xl font-semibold'>{title}</h2>
 
       <div
-        className='mt-3.5 h-full w-full flex-1 rounded-xl bg-gray-700/50 p-4 overflow-y-scroll'
+        className='mt-3.5 h-full w-full flex-1 rounded-xl bg-gray-300 p-4 overflow-y-scroll shadow-black/30 shadow-2xl'
         onDrop={handleDrop}
         onDragOver={e => e?.preventDefault()}
       >

@@ -32,14 +32,14 @@ export default function CreateTodoDialog() {
     return (
         <Dialog>
             <DialogTrigger asChild>
-                <Button variant='secondary'>
+                <Button>
                     ＋ Add New Todo
                 </Button>
             </DialogTrigger>
-            <DialogContent className='sm:max-w-[425px]'>
+            <DialogContent className='sm:max-w-[500px]'>
                 <DialogHeader>
-                    <DialogTitle>Add New Todo</DialogTitle>
-                    <DialogDescription>
+                    <DialogTitle className='text-center text-2xl'>Add New Todo</DialogTitle>
+                    <DialogDescription className='text-center'>
                         What do you want to get done today?
                     </DialogDescription>
                 </DialogHeader>
